@@ -1,0 +1,137 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+spec:
+  memberOf: [guests]
+
+####### TEAMS ##########
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: guests
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Bench
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Aims
+spec:
+  type: team
+  children: []
+
+####### ROLES ##########
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: DevOps
+spec:
+  type: Role
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Dev
+spec:
+  type: Role
+  children: []
+
+####### USERS ##########
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: mq
+spec:
+  profile:
+      displayName: Mayra Quiroga
+      email: mayra-quiroga@enfuse.com
+  memberOf: [Dev, Bench]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ch-enfuse
+spec:
+  profile:
+      displayName: Christian Herrera
+      email: chris-herrera@enfuse.com
+  memberOf: [Dev, Bench]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: wo
+spec:
+  profile:
+      displayName: William Oh
+      email: willoh@enfuse.com
+  memberOf: [Dev, Bench]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: rs
+spec:
+  profile:
+      displayName: Ryan Small
+      email: ryansmall@enfuse.com
+  memberOf: [Dev, Bench]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: aw
+spec:
+  profile:
+      displayName: Andrew Weeks
+      email: andrewweeks@enfuse.com
+  memberOf: [DevOps, Bench]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ch
+spec:
+  profile:
+      displayName: Cahlen Humphreys
+      email: cahlenhumphreysenfuse.com
+  memberOf: [DevOps, Bench, Aims]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: tl
+spec:
+  profile:
+      displayName: Travis Louloudis
+      email: travisl@enfuse.com
+  memberOf: [Dev, Aims]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jb
+spec:
+  profile:
+      displayName: Jeremy Brenner
+      email: jeremybrenner@enfuse.com
+  memberOf: [Dev, Aims]
