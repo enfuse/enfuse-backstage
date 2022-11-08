@@ -1,1 +1,0 @@
-export { AzureBuildPacksComponent } from './AzureBuildPacksComponent';
