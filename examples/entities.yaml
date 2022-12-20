@@ -7,6 +7,14 @@ metadata:
 spec:
   owner: guests
 ---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: enfuse-asae-sandbox
+spec:
+  owner: bench
+---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -39,16 +47,5 @@ spec:
     message ExampleMessage {
       string example = 1;
     };
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
-# demo system to test azure plugin
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: enfuse-asae-sandbox
-  annotations:
-    portal.azure.com/buildpacks-builder-name: default
-spec:
-  type: asae-cluster
-  lifecycle: experimental
-  owner: Bench
+
+  

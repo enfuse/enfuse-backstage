@@ -35,7 +35,7 @@ import { PermissionedRoute } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInPage } from '@backstage/core-components';
-import { AzureBuildpacksPage } from '@internal/plugin-azure-buildpacks';
+// import { TestPage } from '@internal/plugin-test';
 
 const app = createApp({
   apis,
@@ -108,7 +108,7 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
-    <Route path="/azure-buildpacks" element={<AzureBuildpacksPage />} />
+    {/* <Route path="/test" element={<TestPage />} /> */}
   </FlatRoutes>
 );
 

@@ -77,7 +77,11 @@ import {
   isAzureDevOpsAvailable,
 } from '@backstage/plugin-azure-devops';
 
-import { AzureBuildpacksPage,isAsaeBuildpacksBuilderNameAvailable } from '@internal/plugin-azure-buildpacks';
+// import { 
+//   AzureBuildpacksPage,
+//    AsaeAppsListPage,
+//    ExternalConfigurationComponent
+//    } from '@internal/plugin-azure-spring-apps/src';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -384,11 +388,18 @@ const systemPage = (
         unidirectional={false}
       />
     </EntityLayout.Route>
-    <EntityLayout.Route 
-      if={isAsaeBuildpacksBuilderNameAvailable}
-       path="/azure-buildpacks" title="Azure Buildpacks">
+    {/* <EntityLayout.Route 
+       path="/azure-buildpacks" title="Buildpacks">
         <AzureBuildpacksPage></AzureBuildpacksPage>
     </EntityLayout.Route>
+    <EntityLayout.Route 
+       path="/asae-apps-list" title="App List">
+        <AsaeAppsListPage></AsaeAppsListPage>
+    </EntityLayout.Route>
+    <EntityLayout.Route 
+       path="/asae-config" title="Configuration Service">
+        <ExternalConfigurationComponent></ExternalConfigurationComponent>
+    </EntityLayout.Route> */}
   </EntityLayout>
 );
 

@@ -3,7 +3,7 @@ app:
   baseUrl: http://localhost:3000
 
 organization:
-  name: My Company
+  name: Enfuse
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
@@ -96,7 +96,14 @@ catalog:
       target: ../../examples/org.yaml
       rules:
         - allow: [User, Group]
-
+        
+    - type: file
+      target: ../../examples/asae.yml
+      rules:
+        - allow: [System]
+    
+    - type: file
+      target: ../../examples/template/custom-template.yml
     ## Uncomment these lines to add more example data
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
